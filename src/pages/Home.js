@@ -1,15 +1,9 @@
-import React, {useEffect} from 'react'
-import { useDispatch } from 'react-redux'
-import { nasaAction } from '../redux/actions/nasaAction';
+import React from 'react'
+
 
 const Home = () => {
 
-    const dispatch = useDispatch();
-    
-    useEffect(() => {
-      dispatch(nasaAction.getImg());
-    }, [])
-    
+
 
 
   return (

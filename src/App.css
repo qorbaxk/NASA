@@ -1,4 +1,105 @@
-.all-background{
-  background-color: black;
+@font-face {
+  font-family: "SEBANG_Gothic_Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+  font-family: "SEBANG_Gothic_Regular";
+}
+
+.all-background {
+  color: white;
+  background-repeat: repeat;
+  background-position: center;
+  height: fit-content;
+  text-align: center;
+  font-family: "SEBANG_Gothic_Regular";
+  overflow: scroll;
+}
+
+/*네비바*/
+
+.navigation {
+  display: flex;
+  padding-top: 30px;
+}
+
+.navigation img {
+  margin-left: 50px;
+}
+
+.nav-menu {
+  margin-top: 40px;
+  margin-left: 50px;
+  cursor: pointer;
+  text-decoration: none;
   color: white;
 }
+
+.nav-menu:focus{
+  color: #0b3d91;
+  font-weight: bold;
+}
+
+/*스피너*/
+.spinner{
+  height: 100vh;
+  margin-top: 200px;
+}
+
+/*갤러리*/
+.gal-back{
+  background-color: rgb(43, 43, 43);
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 70px;
+  padding-bottom: 20px;
+  height: fit-content;
+}
+
+.gal-img{
+  width: 300px;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 50px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.modal-content{
+  background-color: black !important;
+  text-align: center !important;
+  width: fit-content !important;
+  margin:auto !important;
+  color: rgb(196, 196, 196) !important;
+  border-radius: 15px !important;
+}
+.modal-header{
+ border: 0 !important;
+}
+.btn-close{
+  background-color: white !important;
+}
+.gal-explain img{
+  width: 80%;
+}
+.gal-explain h3{
+  font-weight: bold;
+  background-color: #0b3d91;
+  margin-top: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.gal-explain p{
+  font-size: 12px;
+}
+
+
+
+

@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 let initialState = {
     apodImg:{},
+    loading:true,
 };
 
 const imgSlice = createSlice({
@@ -10,6 +11,13 @@ const imgSlice = createSlice({
     reducers:{
         getMainImg(state,action){
             state.apodImg = action.payload.apodImg;
+            state.loading = false;
+        },
+        getImgRequeset(state,action){
+            state.loading = true;
+        },
+        getImgFailure(state,action){
+            state.loading = true;
         }
 
     }
