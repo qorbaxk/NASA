@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Dropdown, DropdownButton } from "react-bootstrap";
 import { nasaActions } from "../redux/reducers/nasaReducer";
-import {useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 
 const BirthDropDown = () => {
   //년 배열
@@ -36,12 +36,12 @@ const BirthDropDown = () => {
   };
 
   let date = `${yearTitle}-${monthTitle}-${dayTitle}`;
-  console.log("날짜",date);
+  
 
   useEffect(() => {
     dispatch(
       nasaActions.getDating({
-        date:date
+        date: date,
       })
     );
   }, [date]);
