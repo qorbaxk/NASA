@@ -26,11 +26,11 @@ const Gallery = () => {
     );
   }
   return (
-    <div className="gal-back">
+    <div className="contents-back">
       <Container>
         <Row>
-          {newApodImg?.map((item) => (
-            <Col lg={3} md={4} sm={6}>
+          {newApodImg.map((item) => (
+            <Col lg={3} md={6} sm={6}>
               <PhotoCard item={item} />
             </Col>
           ))}

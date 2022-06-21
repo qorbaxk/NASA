@@ -14,7 +14,7 @@ function getImg() {
       console.log(apodImg.data);
 
       dispatch(
-        nasaActions.getMainImg({
+        nasaActions.getApodImg({
           apodImg: apodImg.data,
         })
       );
@@ -24,4 +24,47 @@ function getImg() {
   };
 }
 
-export const nasaAction = { getImg };
+function getMain() {
+  return async (dispatch) => {
+    try {
+      dispatch(nasaActions.getImgRequeset());
+
+      const mainApi = await api.get(`/apod?api_key=${API_KEY}`);
+
+      let [mainMedia] = await Promise.all([mainApi]);
+
+      console.log(mainMedia.data);
+
+      dispatch(
+        nasaActions.getMainMedia({
+          mainMedia: mainMedia.data,
+        })
+      );
+    } catch (error) {
+      dispatch(nasaActions.getImgFailure());
+    }
+  };
+}
+
+function getBirth(date){
+  return async (dispatch) => {
+    try {
+      dispatch(nasaActions.getImgRequeset());
+
+      const birthApi = await api.get(`/apod?api_key=${API_KEY}&date=${date}`);
+
+      let [birthImg] = await Promise.all([birthApi]);
+
+      console.log(birthImg.data);
+
+      dispatch(
+        nasaActions.getBirthImg({
+          birthImg: birthImg.data,
+        })
+      );
+    } catch (error) {
+      dispatch(nasaActions.getImgFailure());
+    }
+  };
+}
+export const nasaAction = { getImg, getMain, getBirth };
