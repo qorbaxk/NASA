@@ -26,8 +26,8 @@ const Navigation = () => {
               <Link to="/gallery" className="nav-menu">
                 GALLERY
               </Link>
-              <Link to="/forme" className="nav-menu">
-                FOR ME
+              <Link to="/Apod" className="nav-menu">
+                APOD
               </Link>
             </Nav>
           </Navbar.Collapse>

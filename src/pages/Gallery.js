@@ -14,9 +14,9 @@ const Gallery = () => {
   }, []);
 
   //이미지만 받아오기
-  let newApodImg = Array.from(apodImg).slice().filter((it)=>it.media_type == "image");
-
-
+  let newApodImg = Array.from(apodImg)
+    .slice()
+    .filter((it) => it.media_type == "image");
 
   if (loading) {
     return (

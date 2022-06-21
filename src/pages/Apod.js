@@ -1,20 +1,18 @@
-import React, { useEffect }  from "react";
+import React, { useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import BirthDropDown from "../components/BirthDropDown";
 import { nasaAction } from "../redux/actions/nasaAction";
 import BirthMedia from "../components/BirthMedia";
 
-const Forme = () => {
-
-  const {date, birthImg,loading} = useSelector((state)=>state.nas);
+const Apod = () => {
+  const { date, birthImg, loading } = useSelector((state) => state.nas);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(nasaAction.getBirth(date));
   }, [date]);
-
 
   return (
     <div className="for-back">
@@ -27,7 +25,7 @@ const Forme = () => {
             <Col>
               <BirthDropDown />
             </Col>
-              <BirthMedia item={birthImg} loading={loading}/>
+            <BirthMedia item={birthImg} loading={loading} />
           </Row>
         </Container>
       </div>
@@ -35,4 +33,4 @@ const Forme = () => {
   );
 };
 
-export default Forme;
+export default Apod;

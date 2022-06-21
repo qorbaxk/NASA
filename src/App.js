@@ -3,7 +3,7 @@ import "./App.css";
 import Home from "./pages/Home";
 import Navigation from "./components/Navigation";
 import Gallery from "./pages/Gallery";
-import Forme from "./pages/Forme";
+import Apod from "./pages/Apod";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/gallery" element={<Gallery />} />
-        <Route path="/forme" element={<Forme />} />
+        <Route path="/Apod" element={<Apod />} />
       </Routes>
     </div>
   );

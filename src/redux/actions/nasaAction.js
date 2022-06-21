@@ -3,27 +3,7 @@ import { nasaActions } from "../reducers/nasaReducer";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
-function getImg() {
-  return async (dispatch) => {
-    try {
-      dispatch(nasaActions.getImgRequeset());
-      const apodImgApi = await api.get(`/apod?api_key=${API_KEY}&count=20`);
-
-      let [apodImg] = await Promise.all([apodImgApi]);
-
-      console.log(apodImg.data);
-
-      dispatch(
-        nasaActions.getApodImg({
-          apodImg: apodImg.data,
-        })
-      );
-    } catch (error) {
-      dispatch(nasaActions.getImgFailure());
-    }
-  };
-}
-
+//메인페이지
 function getMain() {
   return async (dispatch) => {
     try {
@@ -32,8 +12,6 @@ function getMain() {
       const mainApi = await api.get(`/apod?api_key=${API_KEY}`);
 
       let [mainMedia] = await Promise.all([mainApi]);
-
-      console.log(mainMedia.data);
 
       dispatch(
         nasaActions.getMainMedia({
@@ -46,7 +24,28 @@ function getMain() {
   };
 }
 
-function getBirth(date){
+//갤러리 페이지
+function getImg() {
+  return async (dispatch) => {
+    try {
+      dispatch(nasaActions.getImgRequeset());
+      const apodImgApi = await api.get(`/apod?api_key=${API_KEY}&count=20`);
+
+      let [apodImg] = await Promise.all([apodImgApi]);
+
+      dispatch(
+        nasaActions.getApodImg({
+          apodImg: apodImg.data,
+        })
+      );
+    } catch (error) {
+      dispatch(nasaActions.getImgFailure());
+    }
+  };
+}
+
+//apod페이지
+function getBirth(date) {
   return async (dispatch) => {
     try {
       dispatch(nasaActions.getImgRequeset());
@@ -54,8 +53,6 @@ function getBirth(date){
       const birthApi = await api.get(`/apod?api_key=${API_KEY}&date=${date}`);
 
       let [birthImg] = await Promise.all([birthApi]);
-
-      console.log(birthImg.data);
 
       dispatch(
         nasaActions.getBirthImg({

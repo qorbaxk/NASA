@@ -1,7 +1,7 @@
-import React,{useEffect} from 'react';
+import React, { useEffect } from "react";
 import { nasaAction } from "../redux/actions/nasaAction";
 import { useSelector, useDispatch } from "react-redux";
-import MainMedia from '../components/MainMedia';
+import MainMedia from "../components/MainMedia";
 import ClipLoader from "react-spinners/ClipLoader";
 
 const Home = () => {
@@ -12,7 +12,6 @@ const Home = () => {
     dispatch(nasaAction.getMain());
   }, []);
 
-
   if (loading) {
     return (
       <div className="spinner">
@@ -22,9 +21,9 @@ const Home = () => {
   }
   return (
     <div>
-        <MainMedia item={mainMedia}/>
+      <MainMedia item={mainMedia} />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

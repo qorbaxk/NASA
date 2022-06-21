@@ -6,7 +6,6 @@ const MainMedia = ({ item }) => {
   return (
     <div className="main-back">
       <div className="contents-back ">
-     
         <h1>Astronomy Picture of Today</h1>
 
         <div className="medias">
