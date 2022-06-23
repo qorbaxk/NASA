@@ -22,9 +22,9 @@ const Apod = () => {
             <div className="for-notice">
               <h4>1995년 6월 20일 이후부터 선택 가능</h4>
             </div>
-            <Col>
-              <BirthDropDown />
-            </Col>
+
+            <BirthDropDown />
+
             <BirthMedia item={birthImg} loading={loading} />
           </Row>
         </Container>

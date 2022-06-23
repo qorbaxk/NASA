@@ -26,7 +26,7 @@ const BirthMedia = ({ item, loading }) => {
         />
       )}
 
-      <div  className="home-explain">
+      <div className="home-explain">
         <h1>{item.title}</h1>
         <p>{item.explanation}</p>
       </div>

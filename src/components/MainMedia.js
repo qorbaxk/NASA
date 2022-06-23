@@ -10,7 +10,7 @@ const MainMedia = ({ item }) => {
 
         <div className="medias">
           {item.media_type == "image" ? (
-            <img src={item.hdurl} width={1024} height={600} />
+            <img src={item.hdurl} width={1024}  />
           ) : (
             <ReactPlayer
               url={item.url}
