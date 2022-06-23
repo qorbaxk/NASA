@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import Navigation from "./components/Navigation";
 import Gallery from "./pages/Gallery";
 import Apod from "./pages/Apod";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (

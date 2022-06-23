@@ -36,7 +36,6 @@ const BirthDropDown = () => {
   };
 
   let date = `${yearTitle}-${monthTitle}-${dayTitle}`;
-  
 
   useEffect(() => {
     dispatch(
