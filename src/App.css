@@ -198,10 +198,23 @@
   .birth img {
     width: 100%;
   }
+  .birth div{
+    width: 100% !important;
+  }
 }
 /*모바일*/
 @media screen and (max-width: 464px) {
   .birth img {
     width: 100%;
   }
+  .birth div{
+    width: 100% !important;
+  }
+}
+
+
+/*공유버튼*/
+.sharing{
+  border-radius: 10px;
+  font-size: 20px;
 }

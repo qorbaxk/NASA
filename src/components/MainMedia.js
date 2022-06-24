@@ -1,6 +1,5 @@
 import React from "react";
 import ReactPlayer from "react-player";
-import moment from "moment";
 
 const MainMedia = ({ item }) => {
   return (

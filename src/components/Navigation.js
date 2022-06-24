@@ -26,7 +26,7 @@ const Navigation = () => {
               <Link to="/gallery" className="nav-menu">
                 GALLERY
               </Link>
-              <Link to="/Apod" className="nav-menu">
+              <Link to="/apod" className="nav-menu">
                 APOD
               </Link>
             </Nav>
