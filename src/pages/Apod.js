@@ -1,11 +1,13 @@
 import React, { useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import BirthDropDown from "../components/BirthDropDown";
 import { nasaAction } from "../redux/actions/nasaAction";
 import BirthMedia from "../components/BirthMedia";
 import Share from "../components/Share";
 import { useNavigate } from "react-router-dom";
+
+//APOD페이지
 
 const Apod = () => {
   const { date, birthImg, loading } = useSelector((state) => state.nas);
@@ -17,8 +19,6 @@ const Apod = () => {
     dispatch(nasaAction.getBirth(date));
     navigate(`/apod/?q=${date}`);
   }, [date]);
-
- 
 
   return (
     <div className="for-back">
@@ -33,8 +33,7 @@ const Apod = () => {
 
             <BirthMedia item={birthImg} loading={loading} />
 
-            {birthImg.media_type=="video"?null:<Share item={birthImg}/>}
-
+            {birthImg.media_type == "video" ? null : <Share item={birthImg} />}
           </Row>
         </Container>
       </div>

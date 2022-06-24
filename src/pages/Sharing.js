@@ -3,8 +3,10 @@ import { useSearchParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { nasaAction } from "../redux/actions/nasaAction";
 import BirthMedia from "../components/BirthMedia";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import moment from "moment";
+
+//공유시 공유된 페이지 구성
 
 const Sharing = () => {
   const { birthImg } = useSelector((state) => state.nas);

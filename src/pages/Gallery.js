@@ -5,6 +5,8 @@ import PhotoCard from "../components/PhotoCard";
 import { nasaAction } from "../redux/actions/nasaAction";
 import ClipLoader from "react-spinners/ClipLoader";
 
+//갤러리 페이지 구성
+
 const Gallery = () => {
   const { apodImg, loading } = useSelector((state) => state.nas);
   const dispatch = useDispatch();

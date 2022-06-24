@@ -1,6 +1,8 @@
 import React from "react";
 import ReactPlayer from "react-player";
 
+//첫 메인페이지의 사진과 설명을 보여줌
+
 const MainMedia = ({ item }) => {
   return (
     <div className="main-back">

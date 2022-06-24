@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Modal } from "react-bootstrap";
 
+//갤러리 페이지의 각각의 작은 포토카드를 구성
+
 const PhotoCard = ({ item }) => {
   const [show, setShow] = useState(false);
 

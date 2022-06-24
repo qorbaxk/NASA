@@ -3,6 +3,7 @@ import { Dropdown, DropdownButton } from "react-bootstrap";
 import { nasaActions } from "../redux/reducers/nasaReducer";
 import { useDispatch } from "react-redux";
 
+//날짜 고르는 드롭다운
 
 const BirthDropDown = () => {
   //년 배열

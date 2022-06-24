@@ -4,6 +4,8 @@ import { useSelector, useDispatch } from "react-redux";
 import MainMedia from "../components/MainMedia";
 import ClipLoader from "react-spinners/ClipLoader";
 
+//메인페이지 구성
+
 const Home = () => {
   const { mainMedia, loading } = useSelector((state) => state.nas);
   const dispatch = useDispatch();

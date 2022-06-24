@@ -2,6 +2,8 @@ import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
+//맨 위 네비바 구성
+
 const Navigation = () => {
   return (
     <div className="navigation">

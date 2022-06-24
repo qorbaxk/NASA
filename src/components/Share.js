@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import moment from "moment";
-import { useSearchParams } from "react-router-dom";
+
+//카카오톡 공유 기능
 
 const Share = ({ item }) => {
   const url = "https://qorbaxk-nasa.netlify.app/";
@@ -61,10 +62,12 @@ const Share = ({ item }) => {
 
   return (
     <div>
-      <button className="sharing" onClick={shareToKatalk}>
-        <img width={20} src="../img/kakao.png" />
-        공유하기
-      </button>
+      {item.url ? (
+        <button className="sharing" onClick={shareToKatalk}>
+          <img width={20} src="../img/kakao.png" />
+          공유하기
+        </button>
+      ) : null}
     </div>
   );
 };

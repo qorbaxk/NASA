@@ -2,10 +2,9 @@ import React from "react";
 import ReactPlayer from "react-player";
 import ClipLoader from "react-spinners/ClipLoader";
 
-const BirthMedia = ({ item, loading }) => {
+//고른 날짜의 사진(또는 동영상)과 설명을 보여줌
 
-  console.log("영상이야",item);
-  
+const BirthMedia = ({ item, loading }) => {
   if (loading) {
     return (
       <div className="spinner">
