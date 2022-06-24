@@ -66,8 +66,8 @@ const Share = ({ item }) => {
 
   return (
     <div>
-      {dateQuery?.includes("Year") &&
-      dateQuery?.includes("Month") &&
+      {dateQuery?.includes("Year") ||
+      dateQuery?.includes("Month") ||
       dateQuery?.includes("Day") ? null : (
         <button className="sharing" onClick={shareToKatalk}>
           <img width={20} src="../img/kakao.png" />
