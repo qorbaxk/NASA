@@ -5,7 +5,7 @@ import moment from "moment";
 const Share = ({ item }) => {
   
   const url = "https://qorbaxk-nasa.netlify.app/";
-  const shareURL = `${url}apod/?q=${item.date}`;
+  const shareURL = `${url}sharing`;
 
 
   useEffect(() => {

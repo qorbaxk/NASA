@@ -5,6 +5,7 @@ import Navigation from "./components/Navigation";
 import Gallery from "./pages/Gallery";
 import Apod from "./pages/Apod";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Sharing from "./pages/Sharing";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/apod" element={<Apod />} />
+        <Route path="/sharing" element={<Sharing />} />
       </Routes>
     </div>
   );
