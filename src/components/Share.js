@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import moment from "moment";
+import { useSearchParams } from "react-router-dom";
 
 //카카오톡 공유 기능
 
@@ -7,6 +8,9 @@ const Share = ({ item }) => {
   const url = "https://qorbaxk-nasa.netlify.app/";
   const shareURL = `${url}sharing?q=${item.date}`;
   const experienceURL = `${url}apod`;
+
+  const [query, setQuery] = useSearchParams();
+  let dateQuery = query.get("q");
 
   useEffect(() => {
     // 카카오톡 sdk 추가
@@ -62,12 +66,14 @@ const Share = ({ item }) => {
 
   return (
     <div>
-      {item.url ? (
+      {dateQuery?.includes("Year") &&
+      dateQuery?.includes("Month") &&
+      dateQuery?.includes("Day") ? null : (
         <button className="sharing" onClick={shareToKatalk}>
           <img width={20} src="../img/kakao.png" />
           공유하기
         </button>
-      ) : null}
+      )}
     </div>
   );
 };
