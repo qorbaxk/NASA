@@ -3,6 +3,7 @@ import { Dropdown, DropdownButton } from "react-bootstrap";
 import { nasaActions } from "../redux/reducers/nasaReducer";
 import { useDispatch } from "react-redux";
 
+
 const BirthDropDown = () => {
   //년 배열
   let yearArr = [];
@@ -25,16 +26,6 @@ const BirthDropDown = () => {
   const [dayTitle, setDayTitle] = useState("Day");
   const dispatch = useDispatch();
 
-  const handleYear = (eventKey) => {
-    setYearTitle(eventKey);
-  };
-  const handleMonth = (eventKey) => {
-    setMonthTitle(eventKey);
-  };
-  const handleDay = (eventKey) => {
-    setDayTitle(eventKey);
-  };
-
   let date = `${yearTitle}-${monthTitle}-${dayTitle}`;
 
   useEffect(() => {
@@ -51,7 +42,7 @@ const BirthDropDown = () => {
         <DropdownButton
           id="dropdown-item-button"
           title={`${yearTitle} 년`}
-          onSelect={handleYear}
+          onSelect={(eventKey) => setYearTitle(eventKey)}
         >
           {yearArr.reverse().map((value) => (
             <Dropdown.Item eventKey={value} as="button">
@@ -64,7 +55,7 @@ const BirthDropDown = () => {
         <DropdownButton
           id="dropdown-item-button"
           title={`${monthTitle} 월`}
-          onSelect={handleMonth}
+          onSelect={(eventKey) => setMonthTitle(eventKey)}
         >
           {monthArr.map((value) => (
             <Dropdown.Item eventKey={value} as="button">
@@ -77,7 +68,7 @@ const BirthDropDown = () => {
         <DropdownButton
           id="dropdown-item-button"
           title={`${dayTitle} 일`}
-          onSelect={handleDay}
+          onSelect={(eventKey) => setDayTitle(eventKey)}
         >
           {dayArr.map((value) => (
             <Dropdown.Item eventKey={value} as="button">

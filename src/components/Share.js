@@ -3,6 +3,9 @@ import moment from "moment";
 
 
 const Share = ({ item }) => {
+  
+  const url = "https://qorbaxk-nasa.netlify.app/";
+  const shareURL = `${url}apod/?q=${item.date}`;
 
 
   useEffect(() => {
@@ -14,7 +17,7 @@ const Share = ({ item }) => {
     return () => document.body.removeChild(script);
   }, []);
 
-  console.log(item);
+  console.log(item.date);
 
   const shareToKatalk = () => {
     // kakao sdk script 부른 후 window.Kakao로 접근
@@ -35,16 +38,17 @@ const Share = ({ item }) => {
           description: "내가 선택한 그날의 사진을 공유해요",
           imageUrl: item.url,
           link: {
-            mobileWebUrl: window.location.href,
-            webUrl: window.location.href,
+            mobileWebUrl: shareURL,
+            webUrl: shareURL,
+            
           },
         },
         buttons: [
           {
             title: "사진보러가기",
             link: {
-              mobileWebUrl: window.location.href,
-              webUrl: window.location.href,
+              mobileWebUrl: shareURL,
+              webUrl: shareURL,
             },
           },
         ],
