@@ -33,7 +33,7 @@ const Apod = () => {
 
             <BirthMedia item={birthImg} loading={loading} />
 
-            <Share item={birthImg}/>
+            {birthImg.media_type=="video"?null:<Share item={birthImg}/>}
 
           </Row>
         </Container>

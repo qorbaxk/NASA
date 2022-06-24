@@ -3,6 +3,9 @@ import ReactPlayer from "react-player";
 import ClipLoader from "react-spinners/ClipLoader";
 
 const BirthMedia = ({ item, loading }) => {
+
+  console.log("영상이야",item);
+  
   if (loading) {
     return (
       <div className="spinner">

@@ -198,7 +198,7 @@
   .birth img {
     width: 100%;
   }
-  .birth div{
+  .birth div {
     width: 100% !important;
   }
 }
@@ -207,14 +207,24 @@
   .birth img {
     width: 100%;
   }
-  .birth div{
+  .birth div {
     width: 100% !important;
   }
 }
 
-
 /*공유버튼*/
-.sharing{
+.sharing {
   border-radius: 10px;
-  font-size: 20px;
+  font-size: 15px;
+  background-color: #fee500;
+  padding: 5px;
+}
+
+.selected-date h2 {
+  color: #fc3d21;
+  font-weight: bold;
+}
+
+.selected-date {
+  margin-bottom: 20px;
 }

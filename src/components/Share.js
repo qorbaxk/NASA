@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
 import moment from "moment";
-
+import { useSearchParams } from "react-router-dom";
 
 const Share = ({ item }) => {
-  
   const url = "https://qorbaxk-nasa.netlify.app/";
-  const shareURL = `${url}sharing`;
-
+  const shareURL = `${url}sharing?q=${item.date}`;
+  const experienceURL = `${url}apod`;
 
   useEffect(() => {
     // 카카오톡 sdk 추가
@@ -16,8 +15,6 @@ const Share = ({ item }) => {
     document.body.appendChild(script);
     return () => document.body.removeChild(script);
   }, []);
-
-  console.log(item.date);
 
   const shareToKatalk = () => {
     // kakao sdk script 부른 후 window.Kakao로 접근
@@ -40,7 +37,6 @@ const Share = ({ item }) => {
           link: {
             mobileWebUrl: shareURL,
             webUrl: shareURL,
-            
           },
         },
         buttons: [
@@ -51,6 +47,13 @@ const Share = ({ item }) => {
               webUrl: shareURL,
             },
           },
+          {
+            title: "나도하러가기",
+            link: {
+              mobileWebUrl: experienceURL,
+              webUrl: experienceURL,
+            },
+          },
         ],
       });
     }
@@ -58,7 +61,10 @@ const Share = ({ item }) => {
 
   return (
     <div>
-      <button onClick={shareToKatalk}>공유</button>
+      <button className="sharing" onClick={shareToKatalk}>
+        <img width={20} src="../img/kakao.png" />
+        공유하기
+      </button>
     </div>
   );
 };
