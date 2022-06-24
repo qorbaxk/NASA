@@ -1,6 +1,11 @@
 import React, { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { nasaAction } from "../redux/actions/nasaAction";
+import BirthMedia from "../components/BirthMedia";
+import { Container, Row, Col } from "react-bootstrap";
+import moment from "moment";
+import ClipLoader from "react-spinners/ClipLoader";
 
 const Sharing = () => {
   const { date, birthImg, loading } = useSelector((state) => state.nas);
