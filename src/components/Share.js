@@ -1,15 +1,9 @@
 import React, { useEffect } from "react";
 import moment from "moment";
-// import {useSearchParams} from "react-router-dom";
+
 
 const Share = ({ item }) => {
-  //   const [query, setQuery] = useSearchParams();
-  //   let dateQuery = query.get("q");
-  //   console.log("퀄니",dateQuery);
-//   const url = "https://qorbaxk-nasa.netlify.app/";
-//   const shareURL = `${url}apod/?q=${item.date}`;
 
-console.log("주소",window.location.href);
 
   useEffect(() => {
     // 카카오톡 sdk 추가
@@ -41,16 +35,16 @@ console.log("주소",window.location.href);
           description: "내가 선택한 그날의 사진을 공유해요",
           imageUrl: item.url,
           link: {
-            mobileWebUrl: "",
-            webUrl: "",
+            mobileWebUrl: window.location.href,
+            webUrl: window.location.href,
           },
         },
         buttons: [
           {
             title: "사진보러가기",
             link: {
-              mobileWebUrl: "",
-              webUrl: "",
+              mobileWebUrl: window.location.href,
+              webUrl: window.location.href,
             },
           },
         ],
