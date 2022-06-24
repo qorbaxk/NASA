@@ -9,6 +9,8 @@ const Share = ({ item }) => {
 //   const url = "https://qorbaxk-nasa.netlify.app/";
 //   const shareURL = `${url}apod/?q=${item.date}`;
 
+console.log("주소",window.location.href);
+
   useEffect(() => {
     // 카카오톡 sdk 추가
     const script = document.createElement("script");
@@ -39,16 +41,16 @@ const Share = ({ item }) => {
           description: "내가 선택한 그날의 사진을 공유해요",
           imageUrl: item.url,
           link: {
-            mobileWebUrl: window.location.href,
-            webUrl: window.location.href,
+            mobileWebUrl: "",
+            webUrl: "",
           },
         },
         buttons: [
           {
             title: "사진보러가기",
             link: {
-              mobileWebUrl: window.location.href,
-              webUrl: window.location.href,
+              mobileWebUrl: "",
+              webUrl: "",
             },
           },
         ],
